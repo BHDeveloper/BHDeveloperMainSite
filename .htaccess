@@ -1,0 +1,56 @@
+DirectoryIndex home.php
+
+RewriteEngine On
+
+#THIS SECTION WILL REMOVE THE .PHP EXTENSION AND ADD A SLASH / AT THE END
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.php
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+#
+
+RewriteCond %{HTTP_REFERER} !^http://beforesanity.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://beforesanity.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dev.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://dev.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://music.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://music.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://wedding.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://wedding.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.beforesanity.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.beforesanity.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dev.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.dev.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.music.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.music.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.wedding.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.wedding.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://beforesanity.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://beforesanity.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dev.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://dev.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://music.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://music.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://wedding.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://wedding.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.beforesanity.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.beforesanity.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dev.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.dev.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.music.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.music.bhdeveloper.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.wedding.bhdeveloper.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.wedding.bhdeveloper.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+

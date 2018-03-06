@@ -1,0 +1,60 @@
+body
+{
+	background: white;
+}
+
+a
+{
+	font-size: 1.17em;
+}
+
+ul
+{
+	transition:  .5s all ease;
+    -webkit-transition:  .5s all ease;
+	background-color: transparent;
+}
+
+ul:hover
+{
+	background-color:gray;
+}
+
+.navbar_li, a
+{
+	transition:  .5s all ease;
+    -webkit-transition:  .5s all ease;
+	background: transparent;
+}
+
+.navbar_li:hover, a:hover
+{
+	background: #FFFF00;
+}
+
+#navigation
+{
+	background: dimgray;
+}
+
+.altBackground
+{
+	background: #f5f5f5;
+}
+
+#home2
+{
+	background: white;
+}
+
+.icon-bar
+{
+	background: white;
+}
+.socialmedia{
+	height:25px;
+	width:25px;
+}
+.socialmedia:hover{
+	opacity:0.5;
+}
